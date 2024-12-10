@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account.CheckPwActivity">
+
+
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="96dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/searchPwTextview"
+        app:layout_constraintEnd_toEndOf="@+id/searchPwTextview"
+        app:layout_constraintStart_toStartOf="@+id/searchPwTextview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/searchPwTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="비밀번호 찾기"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/searchIdTextview"
+        app:layout_constraintEnd_toEndOf="@+id/searchIdTextview"
+        app:layout_constraintStart_toStartOf="@+id/searchIdTextview"
+        app:layout_constraintTop_toBottomOf="@+id/logoView" />
+
+    <EditText
+        android:id="@+id/searchIdTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/searchPwButton"
+        app:layout_constraintEnd_toEndOf="@+id/searchPwButton"
+        app:layout_constraintStart_toStartOf="@+id/searchPwButton"
+        app:layout_constraintTop_toBottomOf="@+id/searchPwTextview" />
+
+    <Button
+        android:id="@+id/searchPwButton"
+        android:layout_width="216dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/blue1"
+        android:text="찾기"
+        app:layout_constraintBottom_toTopOf="@+id/myPw"
+        app:layout_constraintEnd_toEndOf="@+id/myPw"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="@+id/myPw"
+        app:layout_constraintTop_toBottomOf="@+id/searchIdTextview" />
+
+    <TextView
+        android:id="@+id/myPw"
+        android:layout_width="243dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="63dp"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="@+id/backButton"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="@+id/backButton"
+        app:layout_constraintTop_toBottomOf="@+id/searchPwButton" />
+
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="216dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="94dp"
+        android:backgroundTint="@color/blue1"
+        android:text="로그인하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myPw" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

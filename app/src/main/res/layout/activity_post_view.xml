@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FDF6FE"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"> <!--hieght : dimen-->
+
+        <TextView
+            android:id="@+id/post_toolbar_title"
+            android:text="Place"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+
+        <LinearLayout
+            android:id="@+id/postingSpace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            >
+
+            <TextView
+                android:id="@+id/posted_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\@hyangU"
+                android:textSize="20sp"
+                android:padding="8dp"
+                android:textStyle="bold"
+                />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/write"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@color/blue4">
+
+                <ImageView
+                    android:id="@+id/image_added"
+                    android:layout_width="350dp"
+                    android:layout_height="280dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/starbucks" />
+
+                <TextView
+                    android:id="@+id/posted_title"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:text="스타벅스 숙명여대정문점"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#FDF6FE"
+                    />
+
+                <TextView
+                    android:id="@+id/posted_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:text="스타벅스 숙명여대정문점은 매장이 넓고 조용해서 공부하기 좋아요. 커피도 맛있어요."
+                    android:textSize="13sp"
+                    android:background="#FDF6FE"/>
+
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/posted_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:text="댓글"
+                    android:textSize="13sp"
+                    android:background="#FDF6FE"/>
+
+            <EditText
+                android:id="@+id/editComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="#FDF6FE"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:text="댓글 입력"
+                android:textSize="13sp" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- 공통 BottomNavigationView -->
+    <include layout="@layout/bottom_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
