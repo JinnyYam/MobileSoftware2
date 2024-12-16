@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.example.mobilesoftware.data.User
 import com.example.mobilesoftware.databinding.ActivityEditProfileBinding
 
 class EditProfileActivity : AppCompatActivity() {
@@ -15,6 +16,11 @@ class EditProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEditProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // user 정보 가져오기
+        val userId = User.userId
+        val userName = User.userName
+        binding.editName.setText(userName)
 
         // toolbar 설정
         setSupportActionBar(binding.toolbar)
@@ -50,5 +56,6 @@ class EditProfileActivity : AppCompatActivity() {
                 }
             }
         }
+
 
 }

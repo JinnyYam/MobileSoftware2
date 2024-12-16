@@ -4,11 +4,15 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobilesoftware.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+
+
 
 class MainActivity : AppCompatActivity() {
     val binding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,10 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         // 네비게이션 뷰 초기 상태 설정
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation_view)
-
-        val bottomNavigationManager = BottomNavigationManager(
-            this // 액티비티 전달
-        )
+        val bottomNavigationManager = BottomNavigationManager(this)
         bottomNavigationManager.setupWithBottomNavigationView(bottomNavigationView)
     }
 

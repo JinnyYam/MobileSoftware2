@@ -91,62 +91,56 @@
                     android:src="@drawable/add_a_photo"
                     app:tint="@color/black" />
             </FrameLayout>
-            <LinearLayout
-                android:id="@+id/category"
+            <RadioGroup
+                android:id="@+id/radio_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/write"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/image_added">
-                <TextView
+                android:orientation="horizontal">
+                <RadioButton
                     android:id="@+id/category_playlist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PlayList"
-                    android:background="#FDF6FE"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
                     android:layout_weight="1"
+                    android:backgroundTint="#FDF6FE"
                     android:gravity="center"
-                    />
-                <TextView
+                    android:text="PlayList"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <RadioButton
                     android:id="@+id/category_eat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Eat"
-                    android:background="#FDF6FE"
+                    android:backgroundTint="#FDF6FE"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:layout_weight="1"
                     android:gravity="center"/>
-                <TextView
+                <RadioButton
                     android:id="@+id/category_look"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Look"
-                    android:background="#FDF6FE"
+                    android:backgroundTint="#FDF6FE"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:layout_weight="1"
                     android:gravity="center"/>
-                <TextView
+                <RadioButton
                     android:id="@+id/category_place"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Place"
-                    android:background="#FDF6FE"
+                    android:backgroundTint="#FDF6FE"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:layout_weight="1"
                     android:gravity="center"/>
-
-            </LinearLayout>
+            </RadioGroup>
 
             <LinearLayout
                 android:id="@+id/write"
